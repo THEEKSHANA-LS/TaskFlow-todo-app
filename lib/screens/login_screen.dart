@@ -220,7 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             'Forgot Password?',
                             style: GoogleFonts.poppins(
-                              color: Colors.indigo[900],
+                              color: AppColors.navyBlue,
                               fontWeight: FontWeight.w500,
                               fontSize: 14,
                             ),

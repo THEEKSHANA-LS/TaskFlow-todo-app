@@ -14,6 +14,26 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: AppColors.lightGrayBackground,
       textTheme: GoogleFonts.poppinsTextTheme(),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.white,
+        foregroundColor: AppColors.navyBlue,
+        elevation: 0,
+        centerTitle: false,
+      ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: AppColors.navyBlue,
+        foregroundColor: AppColors.white,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: AppColors.primaryBlue,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+      ),
+      snackBarTheme: const SnackBarThemeData(
+        backgroundColor: AppColors.navyBlue,
+        contentTextStyle: TextStyle(color: AppColors.white),
+      ),
       cardTheme: CardThemeData(
         elevation: 2,
         shadowColor: Colors.black12,
@@ -50,3 +70,4 @@ class AppTheme {
     );
   }
 }
+

@@ -22,7 +22,7 @@ class _DevInfoScreenState extends State<DevInfoScreen> {
           child: Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: const Color(0xFFF8F9FA),
+              color: AppColors.lightGrayBackground,
               borderRadius: BorderRadius.circular(24),
             ),
             child: Column(
@@ -33,7 +33,7 @@ class _DevInfoScreenState extends State<DevInfoScreen> {
                   style: GoogleFonts.poppins(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: const Color(0xFF0D005F),
+                    color: AppColors.primaryBlue,
                   ),
                 ),
                 const SizedBox(height: 32),
@@ -148,7 +148,7 @@ class _DevInfoScreenState extends State<DevInfoScreen> {
                       Navigator.pushReplacementNamed(context, '/dashboard');
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF0D005F),
+                      backgroundColor: AppColors.primaryBlue,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),

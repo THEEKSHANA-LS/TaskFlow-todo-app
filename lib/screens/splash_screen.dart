@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -43,54 +43,56 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF9CA0EF), // Matched soft periwinkle background
-      body: Stack(
-        children: [
-          // Top Left Puzzle Image
-          Positioned(
-            top: -40,
-            left: -40,
-            child: Opacity(
-              opacity: 0.3,
-              child: Image.asset(
-                'assets/images/puzzle.png',
-                width: 250,
-                color: Colors.white,
+      body: Container(
+        decoration: const BoxDecoration(gradient: AppColors.primaryGradient),
+        child: Stack(
+          children: [
+            // Top Left Puzzle Image
+            Positioned(
+              top: -40,
+              left: -40,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/images/puzzle.png',
+                  width: 250,
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
 
-          // Bottom Right Puzzle Image
-          Positioned(
-            bottom: -60,
-            right: -60,
-            child: Opacity(
-              opacity: 0.3,
-              child: Image.asset(
-                'assets/images/puzzle.png',
-                width: 350,
-                color: Colors.white,
+            // Bottom Right Puzzle Image
+            Positioned(
+              bottom: -60,
+              right: -60,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/images/puzzle.png',
+                  width: 350,
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
 
-          // Center Content
-          Center(
-            child: FadeTransition(
-              opacity: _fadeAnimation,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/logo.png',
-                    height: 200,
-                    width: 200,
-                  ),
-                ],
+            // Center Content
+            Center(
+              child: FadeTransition(
+                opacity: _fadeAnimation,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/logo.png',
+                      height: 200,
+                      width: 200,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

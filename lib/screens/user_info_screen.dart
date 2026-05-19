@@ -16,7 +16,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   late TextEditingController _passwordController;
   bool _isEditing = false;
   bool _isPasswordVisible = false;
-  int _selectedIndex = 1;
+  final int _selectedIndex = 1;
 
   @override
   void initState() {
@@ -63,7 +63,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF8F9FA),
+                  color: AppColors.lightGrayBackground,
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: Column(
@@ -74,7 +74,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       style: GoogleFonts.poppins(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: const Color(0xFF0D005F),
+                        color: AppColors.primaryBlue,
                       ),
                     ),
                     const SizedBox(height: 32),
@@ -147,7 +147,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                           }
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF0D005F),
+                          backgroundColor: AppColors.primaryBlue,
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
@@ -184,7 +184,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                               width: 80,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFFF5C5C).withOpacity(0.2),
+                                color: AppColors.warningRed.withOpacity(0.2),
                                 shape: BoxShape.circle,
                               ),
                               child: Center(
@@ -192,7 +192,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                                   width: 48,
                                   height: 48,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFFF5C5C).withOpacity(0.5),
+                                    color: AppColors.warningRed.withOpacity(0.5),
                                     shape: BoxShape.circle,
                                   ),
                                   child: const Icon(Icons.logout, color: Colors.white, size: 28),
@@ -225,7 +225,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                                     onPressed: () => Navigator.pop(context),
                                     style: OutlinedButton.styleFrom(
                                       padding: const EdgeInsets.symmetric(vertical: 16),
-                                      side: const BorderSide(color: Color(0xFFFF5C5C), width: 1.5),
+                                      side: const BorderSide(color: AppColors.warningRed, width: 1.5),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(12),
                                       ),
@@ -235,7 +235,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                                       style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: Color(0xFFFF5C5C),
+                                        color: AppColors.warningRed,
                                       ),
                                     ),
                                   ),
@@ -247,7 +247,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                                       Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color(0xFFFF5C5C),
+                                      backgroundColor: AppColors.warningRed,
                                       padding: const EdgeInsets.symmetric(vertical: 16),
                                       elevation: 0,
                                       shape: RoundedRectangleBorder(
@@ -275,7 +275,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF8F9FA),
+                    color: AppColors.lightGrayBackground,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Row(

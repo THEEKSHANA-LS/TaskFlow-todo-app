@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/task_provider.dart';
-import '../models/task_model.dart';
 import '../utils/constants.dart';
 import '../widgets/task_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,7 +13,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
   final TextEditingController _searchController = TextEditingController();
   String _userName = 'User';
 
@@ -39,14 +38,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
     final taskProvider = Provider.of<TaskProvider>(context);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF3F0FF), // Very light lavender
+      backgroundColor: AppColors.lightGrayBackground,
       body: Column(
         children: [
           // Header Section
           Container(
             padding: const EdgeInsets.fromLTRB(24, 60, 24, 30),
             decoration: const BoxDecoration(
-              color: AppColors.primaryBlue,
+              gradient: AppColors.primaryGradient,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),
                 bottomRight: Radius.circular(30),
@@ -124,7 +123,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, '/add-task'),
-        backgroundColor: const Color(0xFF0D005F), // Deep Navy
+        backgroundColor: AppColors.primaryBlue,
         child: const Icon(Icons.add, color: Colors.white),
       ),
       bottomNavigationBar: BottomNavigationBar(

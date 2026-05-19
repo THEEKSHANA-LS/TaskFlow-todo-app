@@ -60,7 +60,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
             const Icon(
               Icons.assignment_add,
               size: 32,
-              color: Color(0xFF0D005F),
+              color: AppColors.navyBlue,
             ),
             const SizedBox(height: 12),
             Text(
@@ -68,7 +68,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
               style: GoogleFonts.poppins(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: const Color(0xFF0D005F),
+                color: AppColors.navyBlue,
               ),
             ),
             const SizedBox(height: 32),
@@ -168,7 +168,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
                   child: Text(
                     'Cancel',
                     style: GoogleFonts.poppins(
-                      color: const Color(0xFF0D005F),
+                      color: AppColors.navyBlue,
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                     ),
@@ -178,7 +178,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
                 ElevatedButton(
                   onPressed: _saveTask,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0D005F),
+                      backgroundColor: AppColors.primaryBlue,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                     shape: RoundedRectangleBorder(
@@ -287,7 +287,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
                       Navigator.pop(context); // pop screen
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF0D005F),
+                      backgroundColor: AppColors.primaryBlue,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
